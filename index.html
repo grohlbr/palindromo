@@ -2,31 +2,53 @@
 <html>
 <body>
 
+
 Palavra: <input type="text" id="text">
 
-<input type="submit" value="Check" onclick="palindrome()">
+<input type="submit" class="btn btn-primary" value="Check" onclick="palindrome()">
+
+<button type="button" class="btn btn-primary" data-loading-text="Loading...">Loading state</button>
+
+    <div class="pagination">
+      <ul>
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">Next</a></li>
+      </ul>
+    </div>
+
+	
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 
 <script type="text/javascript">
 
 function palindrome(){
+
 	    revString= "";
 		inpString = document.getElementById("text").value;
+		
 		i = inpString.length;
 		
-		for(var j=i; j>=0; j--){
+		for(var j = i; j >= 0; j--) {
 			revString = revString + inpString.charAt(j);
-			//document.write(revString+"<br>");
+			
 		}
-
-		if(inpString == revString){
+		if(inpString == revString) {
 			alert("Palindromo");
 		}
 		else {
 			alert("Nao Palindromo");
-	}
+	    }
 }
 </script>
+
+
 
 </body>
 </html>
